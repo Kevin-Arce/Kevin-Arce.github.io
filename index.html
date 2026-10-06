@@ -1,33 +1,523 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="scroll-smooth dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kevin Stive Arce Andrango - Portafolio</title>
+    <title>Dr. Jonathan A. Zea | Academic & Researcher Portfolio</title>
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        darkBg: '#090d16',
+                        cardBg: '#111827',
+                        cardBorder: '#1f293d',
+                        accentBlue: '#3b82f6',
+                        accentCyan: '#06b6d4',
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #090d16;
+            color: #e2e8f0;
+        }
+        .glow-effect {
+            box-shadow: 0 0 25px rgba(59, 130, 246, 0.15);
+        }
+        .glow-card:hover {
+            box-shadow: 0 0 30px rgba(59, 130, 246, 0.25);
+            border-color: rgba(59, 130, 246, 0.5);
+        }
+    </style>
 </head>
-<body class="bg-slate-950 text-slate-100 font-sans antialiased min-h-screen flex flex-col justify-between">
-    <main class="max-w-4xl mx-auto px-6 py-16 space-y-12">
-        <header class="space-y-4">
-            <span class="px-3 py-1 text-xs font-semibold bg-emerald-500/10 text-emerald-400 rounded-full border border-emerald-500/20">Estudiante Universitario • EPN</span>
-            <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight">Kevin Stive Arce Andrango</h1>
-            <p class="text-lg text-slate-400 max-w-xl">Estudiante de la EPN, apasionado por la tecnología, el desarrollo de software y el mundo digital.</p>
-        </header>
-        
-        <section class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div class="p-6 rounded-2xl bg-slate-900 border border-slate-800 space-y-3">
-                <h2 class="text-xl font-bold text-emerald-400">🚀 Intereses</h2>
-                <p class="text-slate-400 text-sm">Tecnología, programación, redes de computadoras, bases de datos y desarrollo web moderno.</p>
+<body class="bg-darkBg text-slate-100 selection:bg-blue-500 selection:text-white">
+
+    <header class="fixed top-0 left-0 right-0 z-50 bg-[#090d16]/90 backdrop-blur-md border-b border-slate-800">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <a href="#inicio" class="text-lg font-bold tracking-tight text-white flex items-center gap-2">
+                <span class="w-3 h-3 rounded-full bg-blue-500 animate-pulse"></span>
+                <span>Jonathan A. Zea</span>
+            </a>
+            <nav class="hidden md:flex items-center space-x-6 text-sm font-medium text-slate-300">
+                <a href="#inicio" class="hover:text-blue-400 transition-colors">Inicio</a>
+                <a href="#biografia" class="hover:text-blue-400 transition-colors">Biografía</a>
+                <a href="#noticias" class="hover:text-blue-400 transition-colors">Noticias</a>
+                <a href="#publicaciones" class="hover:text-blue-400 transition-colors">Publicaciones</a>
+                <a href="#proyectos" class="hover:text-blue-400 transition-colors">Proyectos</a>
+                <a href="#contacto" class="hover:text-blue-400 transition-colors">Contacto</a>
+            </nav>
+            <div class="flex items-center gap-3">
+                <a href="#contacto" class="hidden sm:inline-flex items-center justify-center px-4 py-2 text-xs font-semibold text-white bg-blue-600 hover:bg-blue-500 rounded-lg transition-all shadow-lg shadow-blue-500/20">
+                    <i class="fa-solid fa-paper-plane mr-1.5"></i> Get in Touch
+                </a>
+                <button id="mobile-menu-btn" class="md:hidden p-2 text-slate-400 hover:text-white focus:outline-none">
+                    <i class="fa-solid fa-bars text-xl"></i>
+                </button>
             </div>
-            <div class="p-6 rounded-2xl bg-slate-900 border border-slate-800 space-y-3">
-                <h2 class="text-xl font-bold text-emerald-400">💡 Proyectos</h2>
-                <p class="text-slate-400 text-sm">Prácticas académicas universitarias, simulaciones de redes y aplicaciones orientadas a la optimización de procesos.</p>
+        </div>
+        <!-- Mobile Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-[#0e1526] border-b border-slate-800 px-4 pt-2 pb-4 space-y-2">
+            <a href="#inicio" class="block py-2 text-slate-300 hover:text-blue-400">Inicio</a>
+            <a href="#biografia" class="block py-2 text-slate-300 hover:text-blue-400">Biografía</a>
+            <a href="#noticias" class="block py-2 text-slate-300 hover:text-blue-400">Noticias</a>
+            <a href="#publicaciones" class="block py-2 text-slate-300 hover:text-blue-400">Publicaciones</a>
+            <a href="#proyectos" class="block py-2 text-slate-300 hover:text-blue-400">Proyectos</a>
+            <a href="#contacto" class="block py-2 text-slate-300 hover:text-blue-400">Contacto</a>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-16 space-y-24">
+        
+        <!-- Hero Section -->
+        <section id="inicio" class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center pt-8">
+            <div class="lg:col-span-7 space-y-6">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs font-medium">
+                    <i class="fa-solid fa-graduation-cap"></i> Ph.D. Researcher in Artificial Intelligence
+                </div>
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-tight">
+                    Jonathan A. <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">Zea</span>
+                </h1>
+                <p class="text-lg text-slate-300 font-medium leading-relaxed">
+                    Research assistant at <span class="text-white font-semibold">Ecuadorian Artificial Intelligence and Computer Vision Lab</span>, Escuela Politécnica Nacional.
+                </p>
+                <p class="text-slate-400 leading-relaxed text-sm sm:text-base">
+                    Currently pursuing a Ph.D. on AI Mechanistic Interpretability. My areas of interest include Deep Learning, Machine Learning, Neural Networks, Algorithms, and the intersection of AI and Philosophy. In a broader context, I am passionate about microcontrollers, embedded systems, robotics, literature, and climate change.
+                </p>
+                <div class="flex flex-wrap gap-4 pt-2">
+                    <a href="#publicaciones" class="px-5 py-3 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-medium text-sm transition-all shadow-lg shadow-blue-600/30 flex items-center gap-2">
+                        <i class="fa-solid fa-book-open"></i> Ver Publicaciones
+                    </a>
+                    <a href="#contacto" class="px-5 py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-medium text-sm transition-all border border-slate-700 flex items-center gap-2">
+                        <i class="fa-solid fa-address-book"></i> Contacto Académico
+                    </a>
+                </div>
+            </div>
+
+            <!-- Profile Card / Image Right -->
+            <div class="lg:col-span-5 flex flex-col items-center">
+                <div class="relative w-72 h-72 sm:w-80 sm:h-80 rounded-3xl p-1 bg-gradient-to-tr from-blue-600 via-cyan-500 to-blue-400 shadow-2xl glow-effect">
+                    <div class="w-full h-full rounded-[22px] overflow-hidden bg-slate-900 relative">
+                        <!-- Profile Image with Fallback -->
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80" 
+                             alt="Jonathan A. Zea" 
+                             class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                             onerror="this.src='https://placehold.co/400x400/111827/3b82f6?text=Jonathan+Zea'">
+                    </div>
+                </div>
+                <div class="mt-6 w-full max-w-xs bg-[#111827] border border-slate-800 rounded-2xl p-4 text-center shadow-lg">
+                    <p class="text-xs uppercase tracking-wider text-blue-400 font-semibold mb-1">Office Location</p>
+                    <p class="text-sm text-slate-300 leading-snug">
+                        Office 404, Building 20<br>
+                        Campus Politécnico “José Rubén Orellana”<br>
+                        Quito - Ecuador
+                    </p>
+                </div>
             </div>
         </section>
+
+        <section id="biografia" class="bg-[#111827]/70 border border-slate-800 rounded-3xl p-6 sm:p-10 backdrop-blur-sm">
+            <div class="max-w-3xl">
+                <h2 class="text-2xl sm:text-3xl font-bold text-white mb-4 flex items-center gap-3">
+                    <i class="fa-solid fa-user-gear text-blue-500 text-xl"></i> Biografía e Intereses
+                </h2>
+                <p class="text-slate-300 leading-relaxed mb-4">
+                    Investigador apasionado por descifrar las cajas negras del aprendizaje profundo. Mi trabajo postdoctoral y doctoral se centra en la interpretabilidad mecanicista, buscando entender cómo los modelos de redes neuronales profundas almacenan y procesan conceptos abstractos internamente.
+                </p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
+                    <div class="bg-[#090d16] border border-slate-800 p-4 rounded-xl">
+                        <div class="text-blue-400 font-semibold mb-1 flex items-center gap-2">
+                            <i class="fa-solid fa-microchip"></i> Hardware & Robotics
+                        </div>
+                        <p class="text-xs text-slate-400">Desarrollo de sistemas embebidos basados en microcontroladores y robótica móvil aplicada a visión artificial.</p>
+                    </div>
+                    <div class="bg-[#090d16] border border-slate-800 p-4 rounded-xl">
+                        <div class="text-cyan-400 font-semibold mb-1 flex items-center gap-2">
+                            <i class="fa-solid fa-brain"></i> AI & Philosophy
+                        </div>
+                        <p class="text-xs text-slate-400">Reflexión teórica sobre la cognición artificial, la interpretabilidad y la ética en sistemas inteligentes avanzados.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="noticias" class="space-y-6">
+            <div class="flex items-center justify-between border-b border-slate-800 pb-4">
+                <h2 class="text-2xl sm:text-3xl font-bold text-white flex items-center gap-3">
+                    <i class="fa-solid fa-bullhorn text-blue-500 text-xl"></i> Noticias y Actualizaciones
+                </h2>
+                <span class="text-xs text-slate-400 bg-slate-800 px-3 py-1 rounded-full">2025 - 2026</span>
+            </div>
+
+            <div class="space-y-4">
+                <!-- News Item 1 -->
+                <div class="bg-[#111827] border border-slate-800 hover:border-slate-700 rounded-2xl p-5 transition-all flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                    <div class="flex items-start gap-4">
+                        <div class="bg-blue-500/10 text-blue-400 p-3 rounded-xl shrink-0 mt-1">
+                            <i class="fa-solid fa-chalkboard-user text-lg"></i>
+                        </div>
+                        <div>
+                            <span class="text-xs font-semibold text-blue-400">Apr 15, 2025</span>
+                            <h3 class="text-base font-semibold text-white mt-0.5">Started teaching period 2025-A at EPN, Numerical Methods class.</h3>
+                            <p class="text-xs text-slate-400 mt-1">Facultad de Ingeniería de Sistemas, Escuela Politécnica Nacional.</p>
+                        </div>
+                    </div>
+                    <span class="self-start sm:self-center text-xs px-2.5 py-1 rounded-md bg-blue-500/10 text-blue-400 border border-blue-500/20">Docencia</span>
+                </div>
+
+                <!-- News Item 2 -->
+                <div class="bg-[#111827] border border-slate-800 hover:border-slate-700 rounded-2xl p-5 transition-all flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                    <div class="flex items-start gap-4">
+                        <div class="bg-cyan-500/10 text-cyan-400 p-3 rounded-xl shrink-0 mt-1">
+                            <i class="fa-solid fa-file-lines text-lg"></i>
+                        </div>
+                        <div>
+                            <span class="text-xs font-semibold text-cyan-400">Apr 15, 2025</span>
+                            <h3 class="text-base font-semibold text-white mt-0.5">“A Systematic Literature Review of Machine Unlearning Techniques in Neural Networks” accepted in Computers, MDPI.</h3>
+                            <p class="text-xs text-slate-400 mt-1">Special issue: Uncertainty-Aware Artificial Intelligence. View the paper <a href="#" class="text-blue-400 hover:underline">here</a>.</p>
+                        </div>
+                    </div>
+                    <span class="self-start sm:self-center text-xs px-2.5 py-1 rounded-md bg-cyan-500/10 text-cyan-400 border border-cyan-500/20">Publicación</span>
+                </div>
+
+                <!-- News Item 3 -->
+                <div class="bg-[#111827] border border-slate-800 hover:border-slate-700 rounded-2xl p-5 transition-all flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                    <div class="flex items-start gap-4">
+                        <div class="bg-purple-500/15 text-purple-400 p-3 rounded-xl shrink-0 mt-1">
+                            <i class="fa-solid fa-book text-lg"></i>
+                        </div>
+                        <div>
+                            <span class="text-xs font-semibold text-purple-400">Feb 19, 2025</span>
+                            <h3 class="text-base font-semibold text-white mt-0.5">Research proposal “Mechanistic Interpretability in Deep Reinforcement Learning” approved.</h3>
+                            <p class="text-xs text-slate-400 mt-1">Aprobado formalmente por el comité doctoral institucional.</p>
+                        </div>
+                    </div>
+                    <span class="self-start sm:self-center text-xs px-2.5 py-1 rounded-md bg-purple-500/15 text-purple-400 border border-purple-500/30">Doctorado</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="publicaciones" class="space-y-8">
+            <div class="flex items-center justify-between border-b border-slate-800 pb-4">
+                <h2 class="text-2xl sm:text-3xl font-bold text-white flex items-center gap-3">
+                    <i class="fa-solid fa-newspaper text-blue-500 text-xl"></i> Publicaciones Seleccionadas
+                </h2>
+                <span class="text-xs text-slate-400">Peer-Reviewed Papers</span>
+            </div>
+
+            <div class="space-y-6">
+                <!-- Publication Card 1 -->
+                <div class="bg-[#111827] border border-slate-800 glow-card rounded-3xl p-6 transition-all grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+                    <!-- Left Side Media: Image/Diagram -->
+                    <div class="lg:col-span-4 rounded-2xl overflow-hidden bg-slate-900 border border-slate-800 aspect-video lg:aspect-square flex items-center justify-center p-2">
+                        <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=600&q=80" 
+                             alt="Paper thumbnail" 
+                             class="w-full h-full object-cover rounded-xl"
+                             onerror="this.src='https://placehold.co/400x300/1e293b/3b82f6?text=Paper+Diagram'">
+                    </div>
+                    <!-- Right Side Content -->
+                    <div class="lg:col-span-8 space-y-3">
+                        <div class="flex flex-wrap items-center gap-2">
+                            <span class="text-xs px-2.5 py-1 rounded-full bg-blue-500/10 text-blue-400 border border-blue-500/20 font-semibold">Computers, 2025</span>
+                            <span class="text-xs text-slate-400"><i class="fa-solid fa-quote-left mr-1"></i> Citations: 15</span>
+                        </div>
+                        <h3 class="text-lg sm:text-xl font-bold text-white hover:text-blue-400 transition-colors">
+                            A Systematic Literature Review of Machine Unlearning Techniques in Neural Networks
+                        </h3>
+                        <p class="text-sm text-slate-300">
+                            Ivanna Daniela Cevallos, <span class="text-white font-medium underline decoration-blue-500/50">Marco E. Benalcázar</span>, Ángel Leonardo Valdivieso Caraguay, and <span class="text-blue-400 font-semibold">Jonathan A. Zea</span>.
+                        </p>
+                        <p class="text-xs text-slate-400">
+                            Comprehensive study analyzing current state-of-the-art algorithms for selectively removing knowledge from trained deep neural networks without retraining from scratch.
+                        </p>
+                        <div class="flex flex-wrap gap-2 pt-2">
+                            <button onclick="openBibtex('bib1')" class="px-3 py-1.5 bg-slate-800 hover:bg-slate-700 text-xs font-semibold rounded-lg text-slate-200 border border-slate-700 transition-all flex items-center gap-1.5">
+                                <i class="fa-solid fa-code"></i> BIB
+                            </button>
+                            <a href="#" target="_blank" class="px-3 py-1.5 bg-blue-600/20 hover:bg-blue-600/30 text-xs font-semibold rounded-lg text-blue-400 border border-blue-500/30 transition-all flex items-center gap-1.5">
+                                <i class="fa-solid fa-file-pdf"></i> PDF
+                            </a>
+                            <span class="px-3 py-1.5 bg-slate-900 text-xs font-medium rounded-lg text-slate-400 border border-slate-800 flex items-center gap-1.5">
+                                <i class="fa-solid fa-graduation-cap text-cyan-400"></i> Scholar (15)
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Publication Card 2 (With Video Demonstration / Simulation Thumbnail) -->
+                <div class="bg-[#111827] border border-slate-800 glow-card rounded-3xl p-6 transition-all grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+                    <!-- Left Side Media: Video Simulation icon/thumbnail -->
+                    <div class="lg:col-span-4 rounded-2xl overflow-hidden bg-slate-900 border border-slate-800 aspect-video lg:aspect-square relative flex items-center justify-center group">
+                        <img src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?auto=format&fit=crop&w=600&q=80" 
+                             alt="EMG Hand Gesture Preview" 
+                             class="w-full h-full object-cover rounded-xl group-hover:scale-105 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-black/40 flex items-center justify-center group-hover:bg-black/20 transition-all">
+                            <span class="w-12 h-12 rounded-full bg-blue-600 text-white flex items-center justify-center shadow-lg shadow-blue-500/50">
+                                <i class="fa-solid fa-play ml-0.5"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <!-- Right Side Content -->
+                    <div class="lg:col-span-8 space-y-3">
+                        <div class="flex flex-wrap items-center gap-2">
+                            <span class="text-xs px-2.5 py-1 rounded-full bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 font-semibold">Intelligent Systems with Applications, 2024</span>
+                            <span class="text-xs text-slate-400"><i class="fa-solid fa-quote-left mr-1"></i> Citations: 96</span>
+                        </div>
+                        <h3 class="text-lg sm:text-xl font-bold text-white hover:text-blue-400 transition-colors">
+                            CNN-LSTM and post-processing for EMG-based hand gesture recognition
+                        </h3>
+                        <p class="text-sm text-slate-300">
+                            Lorena Isabel Barona López, Francis M. Ferri, <span class="text-blue-400 font-semibold underline decoration-blue-500/50">Jonathan A. Zea</span>, and Marco E. Benalcázar.
+                        </p>
+                        <p class="text-xs text-slate-400">
+                            Explores robust electromyography classification architectures integrating convolutional feature extraction with long short-term memory recurrent layers.
+                        </p>
+                        <div class="flex flex-wrap gap-2 pt-2">
+                            <button class="px-3 py-1.5 bg-slate-800 hover:bg-slate-700 text-xs font-semibold rounded-lg text-slate-200 border border-slate-700 transition-all flex items-center gap-1.5">
+                                <i class="fa-solid fa-quote-right"></i> ABS
+                            </button>
+                            <button class="px-3 py-1.5 bg-slate-800 hover:bg-slate-700 text-xs font-semibold rounded-lg text-slate-200 border border-slate-700 transition-all flex items-center gap-1.5">
+                                <i class="fa-solid fa-code"></i> BIB
+                            </button>
+                            <a href="#" target="_blank" class="px-3 py-1.5 bg-blue-600/20 hover:bg-blue-600/30 text-xs font-semibold rounded-lg text-blue-400 border border-blue-500/30 transition-all flex items-center gap-1.5">
+                                <i class="fa-solid fa-file-pdf"></i> PDF
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Publication Card 3 -->
+                <div class="bg-[#111827] border border-slate-800 glow-card rounded-3xl p-6 transition-all grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+                    <!-- Left Side Media -->
+                    <div class="lg:col-span-4 rounded-2xl overflow-hidden bg-slate-900 border border-slate-800 aspect-video lg:aspect-square flex items-center justify-center p-2">
+                        <img src="https://images.unsplash.com/photo-1507413245164-6160d8298b31?auto=format&fit=crop&w=600&q=80" 
+                             alt="Robotics Lab" 
+                             class="w-full h-full object-cover rounded-xl">
+                    </div>
+                    <!-- Right Side Content -->
+                    <div class="lg:col-span-8 space-y-3">
+                        <div class="flex flex-wrap items-center gap-2">
+                            <span class="text-xs px-2.5 py-1 rounded-full bg-purple-500/10 text-purple-400 border border-purple-500/20 font-semibold">IEEE ETCM, 2021</span>
+                            <span class="text-xs text-slate-400"><i class="fa-solid fa-quote-left mr-1"></i> Citations: 7</span>
+                        </div>
+                        <h3 class="text-lg sm:text-xl font-bold text-white hover:text-blue-400 transition-colors">
+                            An Open-Source Data Acquisition and Manual Segmentation System for Hand Gesture Recognition based on EMG
+                        </h3>
+                        <p class="text-sm text-slate-300">
+                            <span class="text-blue-400 font-semibold underline decoration-blue-500/50">Jonathan A. Zea</span>, Marco E. Benalcázar, Lorena Isabel Barona López.
+                        </p>
+                        <p class="text-xs text-slate-400">
+                            Hardware and software framework designed to facilitate real-time acquisition and preprocessing of surface electromyographic biological signals.
+                        </p>
+                        <div class="flex flex-wrap gap-2 pt-2">
+                            <button class="px-3 py-1.5 bg-slate-800 hover:bg-slate-700 text-xs font-semibold rounded-lg text-slate-200 border border-slate-700 transition-all flex items-center gap-1.5">
+                                <i class="fa-solid fa-code"></i> BIB
+                            </button>
+                            <a href="#" target="_blank" class="px-3 py-1.5 bg-blue-600/20 hover:bg-blue-600/30 text-xs font-semibold rounded-lg text-blue-400 border border-blue-500/30 transition-all flex items-center gap-1.5">
+                                <i class="fa-solid fa-file-pdf"></i> PDF
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="proyectos" class="space-y-6">
+            <div class="flex items-center justify-between border-b border-slate-800 pb-4">
+                <h2 class="text-2xl sm:text-3xl font-bold text-white flex items-center gap-3">
+                    <i class="fa-solid fa-diagram-project text-blue-500 text-xl"></i> Proyectos Destacados
+                </h2>
+                <span class="text-xs text-slate-400">Research & Open Source</span>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Project 1 -->
+                <div class="bg-[#111827] border border-slate-800 rounded-3xl p-6 glow-card transition-all flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="p-3 rounded-2xl bg-blue-500/10 text-blue-400 border border-blue-500/20">
+                                <i class="fa-solid fa-network-wired text-xl"></i>
+                            </span>
+                            <span class="text-xs bg-slate-800 text-slate-300 px-3 py-1 rounded-full">Active Lab Project</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-2">Mechanistic Interpretability Suite</h3>
+                        <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                            Modular toolkit designed to dissect internal neural representations, probe attention layers, and visualize feature circuits in complex vision transformers.
+                        </p>
+                    </div>
+                    <div class="pt-6 mt-4 border-t border-slate-800/80 flex items-center justify-between">
+                        <div class="flex gap-2 text-xs text-slate-400">
+                            <span class="bg-slate-900 px-2.5 py-1 rounded-md">Python</span>
+                            <span class="bg-slate-900 px-2.5 py-1 rounded-md">PyTorch</span>
+                        </div>
+                        <a href="#" class="text-xs font-semibold text-blue-400 hover:text-blue-300 flex items-center gap-1">
+                            GitHub Repository <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="bg-[#111827] border border-slate-800 rounded-3xl p-6 glow-card transition-all flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="p-3 rounded-2xl bg-cyan-500/10 text-cyan-400 border border-cyan-500/20">
+                                <i class="fa-solid fa-robot text-xl"></i>
+                            </span>
+                            <span class="text-xs bg-slate-800 text-slate-300 px-3 py-1 rounded-full">Robotics & Embedded</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-2">Quadruped AI Vision Controller</h3>
+                        <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                            Embedded computing architecture integrating low-latency computer vision algorithms for autonomous robotic quadruped terrain traversal.
+                        </p>
+                    </div>
+                    <div class="pt-6 mt-4 border-t border-slate-800/80 flex items-center justify-between">
+                        <div class="flex gap-2 text-xs text-slate-400">
+                            <span class="bg-slate-900 px-2.5 py-1 rounded-md">C++</span>
+                            <span class="bg-slate-900 px-2.5 py-1 rounded-md">ROS2</span>
+                        </div>
+                        <a href="#" class="text-xs font-semibold text-blue-400 hover:text-blue-300 flex items-center gap-1">
+                            Documentation <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contacto" class="bg-gradient-to-br from-[#111827] to-[#0e1526] border border-slate-800 rounded-3xl p-8 sm:p-12 text-center relative overflow-hidden">
+            <div class="absolute -top-24 -right-24 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl pointer-events-none"></div>
+            <div class="max-w-xl mx-auto space-y-6 relative z-10">
+                <h2 class="text-2xl sm:text-3xl font-bold text-white">¿Interesado en colaborar?</h2>
+                <p class="text-sm text-slate-300 leading-relaxed">
+                    Contact me for academic research, doctoral supervision inquiries, consulting projects, or technical collaboration.
+                </p>
+                
+                <!-- Social Icons Links -->
+                <div class="flex items-center justify-center gap-4 sm:gap-6 pt-2">
+                    <a href="mailto:jonathan.zea@epn.edu.ec" title="Email" class="w-12 h-12 rounded-2xl bg-[#090d16] hover:bg-blue-600 border border-slate-800 hover:border-blue-500 text-slate-300 hover:text-white flex items-center justify-center transition-all shadow-lg text-lg">
+                        <i class="fa-solid fa-envelope"></i>
+                    </a>
+                    <a href="#" title="ORCID" class="w-12 h-12 rounded-2xl bg-[#090d16] hover:bg-blue-600 border border-slate-800 hover:border-blue-500 text-slate-300 hover:text-white flex items-center justify-center transition-all shadow-lg text-lg">
+                        <i class="fa-brands fa-orcid"></i>
+                    </a>
+                    <a href="#" title="Google Scholar" class="w-12 h-12 rounded-2xl bg-[#090d16] hover:bg-blue-600 border border-slate-800 hover:border-blue-500 text-slate-300 hover:text-white flex items-center justify-center transition-all shadow-lg text-lg">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </a>
+                    <a href="#" title="GitHub" class="w-12 h-12 rounded-2xl bg-[#090d16] hover:bg-blue-600 border border-slate-800 hover:border-blue-500 text-slate-300 hover:text-white flex items-center justify-center transition-all shadow-lg text-lg">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="#" title="LinkedIn" class="w-12 h-12 rounded-2xl bg-[#090d16] hover:bg-blue-600 border border-slate-800 hover:border-blue-500 text-slate-300 hover:text-white flex items-center justify-center transition-all shadow-lg text-lg">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                    <a href="#" title="RSS Feed" class="w-12 h-12 rounded-2xl bg-[#090d16] hover:bg-blue-600 border border-slate-800 hover:border-blue-500 text-slate-300 hover:text-white flex items-center justify-center transition-all shadow-lg text-lg">
+                        <i class="fa-solid fa-rss"></i>
+                    </a>
+                </div>
+
+                <div class="pt-4">
+                    <a href="mailto:jonathan.zea@epn.edu.ec" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-medium text-sm transition-all shadow-lg shadow-blue-500/20">
+                        <i class="fa-solid fa-paper-plane"></i> Enviar Mensaje Directo
+                    </a>
+                </div>
+            </div>
+        </section>
+
     </main>
-    
-    <footer class="text-center py-6 text-xs text-slate-600 border-t border-slate-900">
-        © 2026 Kevin Stive Arce Andrango • Creado para la actividad extracurricular.
+
+    <footer class="border-t border-slate-800/80 bg-[#070a12] py-8 text-center text-xs text-slate-500">
+        <div class="max-w-6xl mx-auto px-4 space-y-2">
+            <p>&copy; Copyright 2026 Jonathan A. Zea. All rights reserved.</p>
+            <p>Designed with professional dark mode layout & responsive media grid.</p>
+        </div>
     </footer>
+
+    <!-- Simple BibTeX Modal (Hidden by default) -->
+    <div id="bibtex-modal" class="fixed inset-0 z-50 bg-black/70 backdrop-blur-sm hidden items-center justify-center p-4">
+        <div class="bg-[#111827] border border-slate-800 rounded-3xl max-w-lg w-full p-6 relative shadow-2xl space-y-4">
+            <div class="flex items-center justify-between border-b border-slate-800 pb-3">
+                <h3 class="text-base font-bold text-white flex items-center gap-2">
+                    <i class="fa-solid fa-code text-blue-400"></i> BibTeX Citation
+                </h3>
+                <button onclick="closeBibtex()" class="text-slate-400 hover:text-white p-1">
+                    <i class="fa-solid fa-xmark text-lg"></i>
+                </button>
+            </div>
+            <pre id="bibtex-content" class="bg-[#090d16] text-blue-300 text-xs p-4 rounded-xl overflow-x-auto font-mono border border-slate-800">
+@article{zeacevallos2025,
+  title={A Systematic Literature Review of Machine Unlearning Techniques in Neural Networks},
+  author={Cevallos, Ivanna Daniela and Benalcázar, Marco E and Valdivieso Caraguay, Ángel Leonardo and Zea, Jonathan A},
+  journal={Computers},
+  year={2025},
+  publisher={MDPI}
+}
+            </pre>
+            <div class="flex justify-end gap-2">
+                <button onclick="copyBibtex()" class="px-4 py-2 bg-blue-600 hover:bg-blue-500 text-white text-xs font-semibold rounded-lg transition-all flex items-center gap-1.5">
+                    <i class="fa-solid fa-copy"></i> Copiar Código
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript Interactive Scripts -->
+    <script>
+        // Mobile Menu Toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu on link click
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
+
+        // BibTeX Modal Logic
+        function openBibtex(id) {
+            document.getElementById('bibtex-modal').classList.remove('hidden');
+            document.getElementById('bibtex-modal').classList.add('flex');
+        }
+
+        function closeBibtex() {
+            document.getElementById('bibtex-modal').classList.add('hidden');
+            document.getElementById('bibtex-modal').classList.remove('flex');
+        }
+
+        function copyBibtex() {
+            const content = document.getElementById('bibtex-content').innerText;
+            // Fallback clipboard method per iFrame restrictions
+            const textarea = document.createElement('textarea');
+            textarea.value = content;
+            document.body.appendChild(textarea);
+            textarea.select();
+            try {
+                document.execCommand('copy');
+                alert('¡BibTeX copiado al portapapeles!');
+            } catch (err) {
+                console.error('Error al copiar', err);
+            }
+            document.body.removeChild(textarea);
+        }
+
+        // Close modal on background click
+        window.onclick = function(event) {
+            const modal = document.getElementById('bibtex-modal');
+            if (event.target == modal) {
+                closeBibtex();
+            }
+        }
+    </script>
 </body>
 </html>
