@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kevin S. Arce | Portafolio Personal</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        darkBg: '#090d16',
+                        cardBg: '#111827',
+                        cardBorder: '#1f293d',
+                        accentBlue: '#3b82f6',
+                        accentCyan: '#06b6d4',
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- FontAwesome para Íconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #090d16;
+            color: #e2e8f0;
+        }
+        .glow-effect {
+            box-shadow: 0 0 25px rgba(59, 130, 246, 0.15);
+        }
+        .glow-card:hover {
+            box-shadow: 0 0 30px rgba(59, 130, 246, 0.25);
+            border-color: rgba(59, 130, 246, 0.5);
+        }
+    </style>
+</head>
+<body class="bg-darkBg text-slate-100 selection:bg-blue-500 selection:text-white">
+
+    <!-- Navegación -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-[#090d16]/90 backdrop-blur-md border-b border-slate-800">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <a href="#inicio" class="text-lg font-bold tracking-tight text-white flex items-center gap-2">
+                <span class="w-3 h-3 rounded-full bg-blue-500 animate-pulse"></span>
+                <span>Kevin S. Arce</span>
+            </a>
+            <nav class="hidden md:flex items-center space-x-6 text-sm font-medium text-slate-300">
+                <a href="#inicio" class="hover:text-blue-400 transition-colors">Inicio</a>
+                <a href="#biografia" class="hover:text-blue-400 transition-colors">Biografía</a>
+                <a href="#trayectoria" class="hover:text-blue-400 transition-colors">Trayectoria</a>
+                <a href="#habilidades-video" class="hover:text-blue-400 transition-colors">Lenguajes y Multimedia</a>
+                <a href="#contacto" class="hover:text-blue-400 transition-colors">Contacto</a>
+            </nav>
+            <div class="flex items-center gap-3">
+                <a href="mailto:kevin.arce@epn.edu.ec" class="hidden sm:inline-flex items-center justify-center px-4 py-2 text-xs font-semibold text-white bg-blue-600 hover:bg-blue-500 rounded-lg transition-all shadow-lg shadow-blue-500/20">
+                    <i class="fa-solid fa-paper-plane mr-1.5"></i> Contactar
+                </a>
+                <button id="mobile-menu-btn" class="md:hidden p-2 text-slate-400 hover:text-white focus:outline-none">
+                    <i class="fa-solid fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Menú Móvil -->
+        <div id="mobile-menu" class="hidden md:hidden bg-[#0e1526] border-b border-slate-800 px-4 pt-2 pb-4 space-y-2">
+            <a href="#inicio" class="block py-2 text-slate-300 hover:text-blue-400">Inicio</a>
+            <a href="#biografia" class="block py-2 text-slate-300 hover:text-blue-400">Biografía</a>
+            <a href="#trayectoria" class="block py-2 text-slate-300 hover:text-blue-400">Trayectoria</a>
+            <a href="#habilidades-video" class="block py-2 text-slate-300 hover:text-blue-400">Lenguajes y Multimedia</a>
+            <a href="#contacto" class="block py-2 text-slate-300 hover:text-blue-400">Contacto</a>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-16 space-y-24">
+        
+        <!-- Hero Section -->
+        <section id="inicio" class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center pt-8">
+            <div class="lg:col-span-7 space-y-6">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs font-medium">
+                    <i class="fa-solid fa-graduation-cap"></i> Estudiante de Ingeniería en Ciencias de la Computación
+                </div>
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-tight">
+                    Kevin S. <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">Arce</span>
+                </h1>
+                <p class="text-lg text-slate-300 font-medium leading-relaxed">
+                    Estudiante de <span class="text-white font-semibold">4.º Semestre en la Facultad de Ingeniería de Sistemas</span>, Escuela Politécnica Nacional.
+                </p>
+                <p class="text-slate-400 leading-relaxed text-sm sm:text-base">
+                   Apasionado por el desarrollo de software, la arquitectura de dispositivos y las tecnologías emergentes.
+                </p>
+                <div class="flex flex-wrap gap-4 pt-2">
+                    <a href="#trayectoria" class="px-5 py-3 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-medium text-sm transition-all shadow-lg shadow-blue-600/30 flex items-center gap-2">
+                        <i class="fa-solid fa-route"></i> Ver Trayectoria
+                    </a>
+                    <a href="#contacto" class="px-5 py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-medium text-sm transition-all border border-slate-700 flex items-center gap-2">
+                        <i class="fa-solid fa-address-book"></i> Contacto Académico
+                    </a>
+                </div>
+            </div>
+
+            <!-- Profile Card -->
+            <div class="lg:col-span-5 flex flex-col items-center">
+                <div class="relative w-72 h-72 sm:w-80 sm:h-80 rounded-3xl p-1 bg-gradient-to-tr from-blue-600 via-cyan-500 to-blue-400 shadow-2xl glow-effect">
+                    <div class="w-full h-full rounded-[22px] overflow-hidden bg-slate-900 relative">
+                        <img src="https://instagram.fuio13-1.fna.fbcdn.net/v/t39.30808-6/434323715_17904561776955245_1171433810670110112_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=107&_nc_map=urlgen_bucketless&ig_cache_key=MzMzODEyODU3ODQyNjI2NTE1MA%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkZFRUQueHBpZHMuMTIwMC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=YbbId-DYtlEQ7kNvwHWNWGN&_nc_oc=AdrO8DaRWY2egHv54KK7gchFqwNE6bq51hjzqYpE3BDLUVRSHQYxFScsJE0iEL2J_sM&_nc_zt=23&_nc_ht=instagram.fuio13-1.fna&_nc_gid=8hoj-CNOv3ic6aUjhdWA9Q&_nc_ss=706a8&oh=00_AQOnMjoTBr-nJ4pHwZJIU9k2U9ktrC3KUuN3dXPTP_GGKw&oe=6ACC474C" 
+                             alt="Kevin S. Arce" 
+                             onerror="this.onerror=null; this.src='https://placehold.co/400x400/111827/3b82f6?text=Kevin+S.+Arce';"
+                             class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                    </div>
+                </div>
+                <div class="mt-6 w-full max-w-xs bg-[#111827] border border-slate-800 rounded-2xl p-4 text-center shadow-lg">
+                    <p class="text-xs uppercase tracking-wider text-blue-400 font-semibold mb-1">Ubicación</p>
+                    <p class="text-sm text-slate-300 leading-snug">      
+                        Quito, Ecuador - EPN
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Biografía Section -->
+        <section id="biografia" class="bg-[#111827]/70 border border-slate-800 rounded-3xl p-6 sm:p-10 backdrop-blur-sm">
+            <div class="max-w-3xl">
+                <h2 class="text-2xl sm:text-3xl font-bold text-white mb-4 flex items-center gap-3">
+                    <i class="fa-solid fa-user-gear text-blue-500 text-xl"></i> Biografía e Intereses
+                </h2>
+                <p class="text-slate-300 leading-relaxed mb-4">
+                    Estudiante apasionado por aprender y dominar herramientas tecnológicas. Me encuentro enfocado en el aprendizaje de desarrollo de software, algoritmos y la exploración del funcionamiento interno del hardware y la tecnología.
+                </p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
+                    <div class="bg-[#090d16] border border-slate-800 p-4 rounded-xl">
+                        <div class="text-blue-400 font-semibold mb-1 flex items-center gap-2">
+                            <i class="fa-solid fa-code"></i> Desarrollo de Software
+                        </div>
+                        <p class="text-xs text-slate-400">Creación de algoritmos eficientes y aprendizaje constante de nuevos lenguajes y librerías.</p>
+                    </div>
+                    <div class="bg-[#090d16] border border-slate-800 p-4 rounded-xl">
+                        <div class="text-cyan-400 font-semibold mb-1 flex items-center gap-2">
+                            <i class="fa-solid fa-microchip"></i> Hardware y Tecnología
+                        </div>
+                        <p class="text-xs text-slate-400">Interés constante por explorar el diseño de dispositivos e infraestructura informática.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Trayectoria Section (Imagen a un lado, texto al otro) -->
+        <section id="trayectoria" class="space-y-6">
+            <div class="flex items-center justify-between border-b border-slate-800 pb-4">
+                <h2 class="text-2xl sm:text-3xl font-bold text-white flex items-center gap-3">
+                    <i class="fa-solid fa-award text-blue-500 text-xl"></i> Trayectoria
+                </h2>
+                <span class="text-xs text-slate-400 bg-slate-800 px-3 py-1 rounded-full">Experiencia Relevante</span>
+            </div>
+
+            <!-- Tarjeta con Imagen a la izquierda y Texto a la derecha -->
+            <div class="bg-[#111827] border border-slate-800 rounded-3xl p-6 glow-card transition-all overflow-hidden">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+                    
+                    <!-- Contenedor de Imagen -->
+                    <div class="lg:col-span-5 rounded-2xl overflow-hidden border border-slate-800 bg-[#090d16] aspect-video lg:aspect-square flex items-center justify-center">
+                        <img src="https://instagram.fuio13-1.fna.fbcdn.net/v/t39.30808-6/434323715_17904561776955245_1171433810670110112_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=107&_nc_map=urlgen_bucketless&ig_cache_key=MzMzODEyODU3ODQyNjI2NTE1MA%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkZFRUQueHBpZHMuMTIwMC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=YbbId-DYtlEQ7kNvwHWNWGN&_nc_oc=AdrO8DaRWY2egHv54KK7gchFqwNE6bq51hjzqYpE3BDLUVRSHQYxFScsJE0iEL2J_sM&_nc_zt=23&_nc_ht=instagram.fuio13-1.fna&_nc_gid=8hoj-CNOv3ic6aUjhdWA9Q&_nc_ss=706a8&oh=00_AQOnMjoTBr-nJ4pHwZJIU9k2U9ktrC3KUuN3dXPTP_GGKw&oe=6ACC474C" 
+                             alt="Intercolegial de Programación en Python" 
+                             onerror="this.onerror=null; this.src='https://placehold.co/600x400/111827/3b82f6?text=Intercolegial+Krakedev';"
+                             class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                    </div>
+
+                    <!-- Contenedor de Texto -->
+                    <div class="lg:col-span-7 space-y-4">
+                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs font-semibold">
+                            <i class="fa-solid fa-trophy"></i> Competencia y Formación
+                        </div>
+                        <h3 class="text-xl sm:text-2xl font-bold text-white">
+                            Intercolegial de Programación en Python
+                        </h3>
+                        <p class="text-sm text-slate-300 leading-relaxed">
+                            La Escuela de Programación Krakedev realizó un intercolegial en el cual tuve la oportunidad de participar. En ese momento no contaba con conocimientos previos en programación, pero la institución impartió un curso por fases para prepararnos para el certamen.
+                        </p>
+                        <p class="text-sm text-slate-300 leading-relaxed">
+                            A medida que avanzaba en el proceso, mi interés por el área creció significativamente hasta lograr clasificar a la fase final. Esta experiencia fue decisiva: consolidó mi gusto por la tecnología y la investigación de dispositivos, motivándome a elegir la carrera de <strong class="text-white">Ciencias de la Computación</strong> en la Escuela Politécnica Nacional.
+                        </p>
+                        <div class="flex flex-wrap gap-2 pt-2">
+                            <span class="text-xs bg-[#090d16] text-blue-400 border border-slate-800 px-3 py-1 rounded-lg">Python</span>
+                            <span class="text-xs bg-[#090d16] text-blue-400 border border-slate-800 px-3 py-1 rounded-lg">Krakedev</span>
+                            <span class="text-xs bg-[#090d16] text-blue-400 border border-slate-800 px-3 py-1 rounded-lg">Finalista</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Lenguajes de Programación y Cuadro de Video -->
+        <section id="habilidades-video" class="space-y-6">
+            <div class="flex items-center justify-between border-b border-slate-800 pb-4">
+                <h2 class="text-2xl sm:text-3xl font-bold text-white flex items-center gap-3">
+                    <i class="fa-solid fa-laptop-code text-blue-500 text-xl"></i> Lenguajes de Programación y Multimedia
+                </h2>
+                <span class="text-xs text-slate-400">Habilidades Técnicas</span>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+                
+                <!-- Columna Izquierda: Lenguajes Destacados -->
+                <div class="lg:col-span-5 bg-[#111827] border border-slate-800 rounded-3xl p-6 flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-lg font-bold text-white mb-2 flex items-center gap-2">
+                            <i class="fa-solid fa-code-branch text-blue-400"></i> Lenguajes Conocidos
+                        </h3>
+                        <p class="text-xs text-slate-400 mb-6">
+                            Tecnologías y lenguajes con los que trabajo activamente en el ámbito académico y personal.
+                        </p>
+
+                        <div class="space-y-4">
+                            <!-- Python -->
+                            <div class="bg-[#090d16] border border-slate-800 p-4 rounded-2xl flex items-center gap-4">
+                                <div class="w-10 h-10 rounded-xl bg-blue-500/10 text-blue-400 flex items-center justify-center text-xl shrink-0">
+                                    <i class="fa-brands fa-python"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-sm font-bold text-white">Python</h4>
+                                    <p class="text-xs text-slate-400">Desarrollo de lógica, scripts y resolución de problemas.</p>
+                                </div>
+                            </div>
+
+                            <!-- C++ -->
+                            <div class="bg-[#090d16] border border-slate-800 p-4 rounded-2xl flex items-center gap-4">
+                                <div class="w-10 h-10 rounded-xl bg-cyan-500/10 text-cyan-400 flex items-center justify-center text-xl shrink-0">
+                                    <i class="fa-solid fa-[#]">C++</i>
+                                </div>
+                                <div>
+                                    <h4 class="text-sm font-bold text-white">C++</h4>
+                                    <p class="text-xs text-slate-400">Estructuras de datos y programación orientada a objetos.</p>
+                                </div>
+                            </div>
+
+                            <!-- Java -->
+                            <div class="bg-[#090d16] border border-slate-800 p-4 rounded-2xl flex items-center gap-4">
+                                <div class="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center text-xl shrink-0">
+                                    <i class="fa-brands fa-java"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-sm font-bold text-white">Java</h4>
+                                    <p class="text-xs text-slate-400">Fundamentos POO y proyectos académicos.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Columna Derecha: Cuadro para Video -->
+                <div class="lg:col-span-7 bg-[#111827] border border-slate-800 rounded-3xl p-6 flex flex-col justify-center">
+                    <h3 class="text-lg font-bold text-white mb-2 flex items-center gap-2">
+                        <i class="fa-solid fa-circle-play text-cyan-400"></i> Presentación en Video
+                    </h3>
+                    <p class="text-xs text-slate-400 mb-4">
+                        Espacio listo para reproducir contenido audiovisual sobre proyectos o presentación.
+                    </p>
+
+                    <!-- Marco de Video (Paso previo para incrustar un iframe o video tag) -->
+                    <div class="w-full aspect-video bg-[#090d16] border-2 border-dashed border-slate-800 rounded-2xl flex flex-col items-center justify-center text-center p-6 relative overflow-hidden group">
+                        
+                        <!-- Puedes reemplazar este contenedor con un iframe de YouTube cuando lo tengas:
+                             <iframe class="w-full h-full rounded-xl" src="https://www.youtube.com/embed/TU_ID_AQUI" frameborder="0" allowfullscreen></iframe>
+                        -->
+                        
+                        <div class="w-16 h-16 rounded-full bg-blue-600/20 text-blue-400 flex items-center justify-center mb-3 text-2xl group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-play"></i>
+                        </div>
+                        <p class="text-sm font-semibold text-slate-300">Espacio Reservado para Video</p>
+                        <p class="text-xs text-slate-500 mt-1 max-w-xs">
+                            Reemplaza la etiqueta de este contenedor con tu iframe de YouTube o etiqueta &lt;video&gt; cuando esté listo.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Contacto Section -->
+        <section id="contacto" class="bg-gradient-to-br from-[#111827] to-[#0e1526] border border-slate-800 rounded-3xl p-8 sm:p-12 text-center relative overflow-hidden">
+            <div class="absolute -top-24 -right-24 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl pointer-events-none"></div>
+            <div class="max-w-xl mx-auto space-y-6 relative z-10">
+                <h2 class="text-2xl sm:text-3xl font-bold text-white">¿Interesado en contactarme?</h2>
+                <p class="text-sm text-slate-300 leading-relaxed">
+                    Escríbeme para consultas sobre proyectos académicos o colaboraciones en Ciencias de la Computación.
+                </p>
+                
+                <div class="flex items-center justify-center gap-4 sm:gap-6 pt-2">
+                    <a href="mailto:kevin.arce@epn.edu.ec" title="Enviar Email" class="w-12 h-12 rounded-2xl bg-[#090d16] hover:bg-blue-600 border border-slate-800 hover:border-blue-500 text-slate-300 hover:text-white flex items-center justify-center transition-all shadow-lg text-lg">
+                        <i class="fa-solid fa-envelope"></i>
+                    </a>
+                    <a href="#" title="GitHub" class="w-12 h-12 rounded-2xl bg-[#090d16] hover:bg-blue-600 border border-slate-800 hover:border-blue-500 text-slate-300 hover:text-white flex items-center justify-center transition-all shadow-lg text-lg">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                </div>
+
+                <div class="pt-4">
+                    <a href="mailto:kevin.arce@epn.edu.ec" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-medium text-sm transition-all shadow-lg shadow-blue-500/20">
+                        <i class="fa-solid fa-paper-plane"></i> Enviar Correo Directo
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="border-t border-slate-800/80 bg-[#070a12] py-8 text-center text-xs text-slate-500">
+        <div class="max-w-6xl mx-auto px-4 space-y-2">
+            <p>&copy; Copyright 2026 Kevin S. Arce. Todos los derechos reservados.</p>
+            <p>Escuela Politécnica Nacional - Facultad de Ingeniería de Sistemas.</p>
+        </div>
+    </footer>
+
+    <!-- Simple BibTeX Modal (Oculto por defecto) -->
+    <div id="bibtex-modal" class="fixed inset-0 z-50 bg-black/70 backdrop-blur-sm hidden items-center justify-center p-4">
+        <div class="bg-[#111827] border border-slate-800 rounded-3xl max-w-lg w-full p-6 relative shadow-2xl space-y-4">
+            <div class="flex items-center justify-between border-b border-slate-800 pb-3">
+                <h3 class="text-base font-bold text-white flex items-center gap-2">
+                    <i class="fa-solid fa-code text-blue-400"></i> Cita BibTeX
+                </h3>
+                <button onclick="closeBibtex()" class="text-slate-400 hover:text-white p-1" aria-label="Cerrar modal">
+                    <i class="fa-solid fa-xmark text-lg"></i>
+                </button>
+            </div>
+            
+            <pre id="bibtex-content" class="bg-[#090d16] text-blue-300 text-xs p-4 rounded-xl overflow-x-auto font-mono border border-slate-800 leading-relaxed">
+@article{arce2026,
+  title={Portafolio Personal},
+  author={Arce, Kevin S.},
+  institution={Escuela Politécnica Nacional},
+  year={2026}
+}</pre>
+
+            <div class="flex justify-end gap-2 pt-2">
+                <button id="copy-btn" onclick="copyBibtex()" class="px-4 py-2 bg-blue-600 hover:bg-blue-500 text-white text-xs font-semibold rounded-lg transition-all flex items-center gap-1.5 shadow-lg shadow-blue-600/20">
+                    <i class="fa-solid fa-copy"></i> Copiar Código
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript de Interacción -->
+    <script>
+        // Menú Móvil
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        if (btn && menu) {
+            btn.addEventListener('click', () => {
+                menu.classList.toggle('hidden');
+            });
+
+            document.querySelectorAll('#mobile-menu a').forEach(link => {
+                link.addEventListener('click', () => {
+                    menu.classList.add('hidden');
+                });
+            });
+        }
+
+        // Modal BibTeX
+        function openBibtex(id) {
+            const modal = document.getElementById('bibtex-modal');
+            if (modal) {
+                modal.classList.remove('hidden');
+                modal.classList.add('flex');
+            }
+        }
+
+        function closeBibtex() {
+            const modal = document.getElementById('bibtex-modal');
+            if (modal) {
+                modal.classList.add('hidden');
+                modal.classList.remove('flex');
+            }
+        }
+
+        // Copiar Código BibTeX
+        async function copyBibtex() {
+            const content = document.getElementById('bibtex-content').innerText;
+            const copyBtn = document.getElementById('copy-btn');
+            
+            try {
+                if (navigator.clipboard && window.isSecureContext) {
+                    await navigator.clipboard.writeText(content);
+                } else {
+                    const textarea = document.createElement('textarea');
+                    textarea.value = content;
+                    textarea.style.position = 'fixed';
+                    textarea.style.opacity = '0';
+                    document.body.appendChild(textarea);
+                    textarea.select();
+                    document.execCommand('copy');
+                    document.body.removeChild(textarea);
+                }
+
+                if (copyBtn) {
+                    const originalText = copyBtn.innerHTML;
+                    copyBtn.innerHTML = '<i class="fa-solid fa-check"></i> ¡Copiado!';
+                    copyBtn.classList.replace('bg-blue-600', 'bg-emerald-600');
+                    
+                    setTimeout(() => {
+                        copyBtn.innerHTML = originalText;
+                        copyBtn.classList.replace('bg-emerald-600', 'bg-blue-600');
+                    }, 2000);
+                }
+            } catch (err) {
+                console.error('Error al copiar:', err);
+            }
+        }
+
+        // Cerrar modal al hacer clic en el fondo
+        window.addEventListener('click', (event) => {
+            const modal = document.getElementById('bibtex-modal');
+            if (event.target === modal) {
+                closeBibtex();
+            }
+        });
+    </script>
+</body>
+</html>
