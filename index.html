@@ -54,7 +54,7 @@
                 <a href="#inicio" class="hover:text-blue-400 transition-colors">Inicio</a>
                 <a href="#biografia" class="hover:text-blue-400 transition-colors">Biografía</a>
                 <a href="#trayectoria" class="hover:text-blue-400 transition-colors">Trayectoria</a>
-                <a href="#habilidades-video" class="hover:text-blue-400 transition-colors">Lenguajes de Programación</a>
+                <a href="#habilidades" class="hover:text-blue-400 transition-colors">Lenguajes de Programación</a>
                 <a href="#contacto" class="hover:text-blue-400 transition-colors">Contacto</a>
             </nav>
             <div class="flex items-center gap-3">
@@ -71,7 +71,7 @@
             <a href="#inicio" class="block py-2 text-slate-300 hover:text-blue-400">Inicio</a>
             <a href="#biografia" class="block py-2 text-slate-300 hover:text-blue-400">Biografía</a>
             <a href="#trayectoria" class="block py-2 text-slate-300 hover:text-blue-400">Trayectoria</a>
-            <a href="#habilidades-video" class="block py-2 text-slate-300 hover:text-blue-400">Lenguajes de Programación</a>
+            <a href="#habilidades" class="block py-2 text-slate-300 hover:text-blue-400">Lenguajes de Programación</a>
             <a href="#contacto" class="block py-2 text-slate-300 hover:text-blue-400">Contacto</a>
         </div>
     </header>
@@ -103,14 +103,15 @@
                 </div>
             </div>
 
-            <!-- Profile Card -->
+            <!-- Profile Card (Usando 'perfil ak.jpg' almacenada localmente o con fallback seguro) -->
             <div class="lg:col-span-5 flex flex-col items-center">
                 <div class="relative w-72 h-72 sm:w-80 sm:h-80 rounded-3xl p-1 bg-gradient-to-tr from-blue-600 via-cyan-500 to-blue-400 shadow-2xl glow-effect">
                     <div class="w-full h-full rounded-[22px] overflow-hidden bg-slate-900 relative">
-                        <img src="https://instagram.fuio13-1.fna.fbcdn.net/v/t51.82787-15/627997436_18090206675077977_9038547194825754428_n.webp?_nc_cat=106&_nc_map=urlgen_bucketless&ig_cache_key=MzQ1MzAzNjMzMzY1ODIxNjE0Nw%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkZFRUQueHBpZHMuMTQ0MC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=23OnxJvfQWYQ7kNvwFN3iPj&_nc_oc=AdoUWFTlDED-cdjOA9H9hDKYkrQCQAJ3_xoWBydgqumdvFoqN2FTU7jXMCmbLSQDt84&_nc_zt=23&_nc_ht=instagram.fuio13-1.fna&_nc_gid=DxD2evO9NW5ngNsYBWAN0g&_nc_ss=706a8&oh=00_AQNwSA-2yp_tgw680rCoodIntdBMLNc6fR0Vo0F6S551QQ&oe=6ACC4BE7" 
+                        <!-- Reemplaza 'perfil ak.jpg' por el nombre o ruta del archivo de tu foto de perfil si lo deseas local -->
+                        <img src="perfil ak.jpg" 
                              alt="Kevin S. Arce" 
                              onerror="this.onerror=null; this.src='https://placehold.co/400x400/111827/3b82f6?text=Kevin+S.+Arce';"
-                             class="w-full h-full object-cover object-[92%_30%] hover:scale-105 transition-transform duration-500">
+                             class="w-full h-full object-cover object-center hover:scale-105 transition-transform duration-500">
                     </div>
                 </div>
                 <div class="mt-6 w-full max-w-xs bg-[#111827] border border-slate-800 rounded-2xl p-4 text-center shadow-lg">
@@ -163,14 +164,14 @@
                 <span class="text-xs text-slate-400 bg-slate-800 px-3 py-1 rounded-full">Experiencia Relevante</span>
             </div>
 
-            <!-- Tarjeta con Imagen a la izquierda y Texto a la derecha -->
+            <!-- Tarjeta con la imagen de Krakedev y el enlace a la publicación -->
             <div class="bg-[#111827] border border-slate-800 rounded-3xl p-6 glow-card transition-all overflow-hidden">
                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
                     
-                    <!-- Contenedor de Imagen -->
-                    <div class="lg:col-span-5 rounded-2xl overflow-hidden border border-slate-800 bg-[#090d16] aspect-video lg:aspect-square flex items-center justify-center">
-                        <img src="https://instagram.fuio13-1.fna.fbcdn.net/v/t39.30808-6/434323715_17904561776955245_1171433810670110112_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=107&_nc_map=urlgen_bucketless&ig_cache_key=MzMzODEyODU3ODQyNjI2NTE1MA%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkZFRUQueHBpZHMuMTIwMC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=YbbId-DYtlEQ7kNvwHWNWGN&_nc_oc=AdrO8DaRWY2egHv54KK7gchFqwNE6bq51hjzqYpE3BDLUVRSHQYxFScsJE0iEL2J_sM&_nc_zt=23&_nc_ht=instagram.fuio13-1.fna&_nc_gid=8hoj-CNOv3ic6aUjhdWA9Q&_nc_ss=706a8&oh=00_AQOnMjoTBr-nJ4pHwZJIU9k2U9ktrC3KUuN3dXPTP_GGKw&oe=6ACC474C" 
-                             alt="Intercolegial de Programación en Python" 
+                    <!-- Contenedor de Imagen (Usando 'krakedev.jpg') -->
+                    <div class="lg:col-span-5 rounded-2xl overflow-hidden border border-slate-800 bg-[#090d16] aspect-square flex items-center justify-center">
+                        <img src="krakedev.jpg" 
+                             alt="Intercolegial de Programación en Python - Krakedev" 
                              onerror="this.onerror=null; this.src='https://placehold.co/600x400/111827/3b82f6?text=Intercolegial+Krakedev';"
                              class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
                     </div>
@@ -189,6 +190,11 @@
                         <p class="text-sm text-slate-300 leading-relaxed">
                             A medida que avanzaba en el proceso, mi interés por el área creció significativamente hasta lograr clasificar a la fase final. Esta experiencia fue decisiva: consolidó mi gusto por la tecnología y la investigación de dispositivos, motivándome a elegir la carrera de <strong class="text-white">Ciencias de la Computación</strong> en la Escuela Politécnica Nacional.
                         </p>
+                        <div class="pt-2">
+                            <a href="https://www.instagram.com/p/C5R9tq5upvN/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-xs font-semibold text-blue-400 hover:text-blue-300 transition-colors bg-blue-500/10 px-3 py-2 rounded-xl border border-blue-500/20">
+                                <i class="fa-brands fa-instagram"></i> Ver publicación oficial de la competencia <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                            </a>
+                        </div>
                         <div class="flex flex-wrap gap-2 pt-2">
                             <span class="text-xs bg-[#090d16] text-blue-400 border border-slate-800 px-3 py-1 rounded-lg">Python</span>
                             <span class="text-xs bg-[#090d16] text-blue-400 border border-slate-800 px-3 py-1 rounded-lg">Krakedev</span>
@@ -200,8 +206,8 @@
             </div>
         </section>
 
-        <!-- Lenguajes de Programación y Cuadro de Video en Formato 9:16 -->
-        <section id="habilidades-video" class="space-y-6">
+        <!-- Lenguajes de Programación (Sin sección de video) -->
+        <section id="habilidades" class="space-y-6">
             <div class="flex items-center justify-between border-b border-slate-800 pb-4">
                 <h2 class="text-2xl sm:text-3xl font-bold text-white flex items-center gap-3">
                     <i class="fa-solid fa-laptop-code text-blue-500 text-xl"></i> Lenguajes de Programación
@@ -209,78 +215,39 @@
                 <span class="text-xs text-slate-400">Habilidades Técnicas</span>
             </div>
 
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-                
-                <!-- Columna Izquierda: Lenguajes Destacados -->
-                <div class="lg:col-span-6 bg-[#111827] border border-slate-800 rounded-3xl p-6 sm:p-8 flex flex-col justify-between h-full">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Python -->
+                <div class="bg-[#111827] border border-slate-800 p-6 rounded-3xl flex items-center gap-4 glow-card transition-all">
+                    <div class="w-12 h-12 rounded-2xl bg-blue-500/10 text-blue-400 flex items-center justify-center text-2xl shrink-0">
+                        <i class="fa-brands fa-python"></i>
+                    </div>
                     <div>
-                        <h3 class="text-lg font-bold text-white mb-2 flex items-center gap-2">
-                            <i class="fa-solid fa-code-branch text-blue-400"></i> Lenguajes Conocidos
-                        </h3>
-                        <p class="text-xs text-slate-400 mb-6">
-                            Tecnologías y lenguajes con los que trabajo activamente en el ámbito académico y personal.
-                        </p>
-
-                        <div class="space-y-4">
-                            <!-- Python -->
-                            <div class="bg-[#090d16] border border-slate-800 p-4 rounded-2xl flex items-center gap-4">
-                                <div class="w-10 h-10 rounded-xl bg-blue-500/10 text-blue-400 flex items-center justify-center text-xl shrink-0">
-                                    <i class="fa-brands fa-python"></i>
-                                </div>
-                                <div>
-                                    <h4 class="text-sm font-bold text-white">Python</h4>
-                                    <p class="text-xs text-slate-400">Desarrollo de lógica, scripts y resolución de problemas.</p>
-                                </div>
-                            </div>
-
-                            <!-- C++ -->
-                            <div class="bg-[#090d16] border border-slate-800 p-4 rounded-2xl flex items-center gap-4">
-                                <div class="w-10 h-10 rounded-xl bg-cyan-500/10 text-cyan-400 flex items-center justify-center text-xl shrink-0">
-                                    <i class="fa-solid fa-[#]">C++</i>
-                                </div>
-                                <div>
-                                    <h4 class="text-sm font-bold text-white">C++</h4>
-                                    <p class="text-xs text-slate-400">Estructuras de datos y programación orientada a objetos.</p>
-                                </div>
-                            </div>
-
-                            <!-- Java -->
-                            <div class="bg-[#090d16] border border-slate-800 p-4 rounded-2xl flex items-center gap-4">
-                                <div class="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center text-xl shrink-0">
-                                    <i class="fa-brands fa-java"></i>
-                                </div>
-                                <div>
-                                    <h4 class="text-sm font-bold text-white">Java</h4>
-                                    <p class="text-xs text-slate-400">Fundamentos POO y proyectos académicos.</p>
-                                </div>
-                            </div>
-                        </div>
+                        <h4 class="text-base font-bold text-white">Python</h4>
+                        <p class="text-xs text-slate-400">Desarrollo de lógica, scripts y resolución de problemas.</p>
                     </div>
                 </div>
 
-                <!-- Columna Derecha: Cuadro para Video en Formato 9:16 -->
-                <div class="lg:col-span-6 bg-[#111827] border border-slate-800 rounded-3xl p-6 sm:p-8 flex flex-col items-center justify-center">
-                    <p class="text-xs text-slate-400 mb-4 text-center">
-                        Espacio listo para reproducir contenido en formato vertical (9:16).
-                    </p>
-
-                    <!-- Marco de Video 9:16 -->
-                    <div class="w-full max-w-[280px] aspect-[9/16] bg-[#090d16] border-2 border-dashed border-slate-800 rounded-2xl flex flex-col items-center justify-center text-center p-6 relative overflow-hidden group shadow-xl">
-                        
-                        <!-- Cuando tengas tu video/Shorts puedes insertar aquí el iframe o tag de video:
-                             <iframe class="w-full h-full rounded-xl" src="https://www.youtube.com/embed/TU_ID_AQUI" frameborder="0" allowfullscreen></iframe>
-                        -->
-                        
-                        <div class="w-16 h-16 rounded-full bg-blue-600/20 text-blue-400 flex items-center justify-center mb-3 text-2xl group-hover:scale-110 transition-transform">
-                            <i class="fa-solid fa-play"></i>
-                        </div>
-                        <p class="text-xs font-semibold text-slate-300">Video Vertical (9:16)</p>
-                        <p class="text-[11px] text-slate-500 mt-2">
-                            Reemplaza este bloque con tu iframe o etiqueta &lt;video&gt; cuando lo tengas listo.
-                        </p>
+                <!-- C++ -->
+                <div class="bg-[#111827] border border-slate-800 p-6 rounded-3xl flex items-center gap-4 glow-card transition-all">
+                    <div class="w-12 h-12 rounded-2xl bg-cyan-500/10 text-cyan-400 flex items-center justify-center text-xl font-bold shrink-0">
+                        C++
+                    </div>
+                    <div>
+                        <h4 class="text-base font-bold text-white">C++</h4>
+                        <p class="text-xs text-slate-400">Estructuras de datos y programación orientada a objetos.</p>
                     </div>
                 </div>
 
+                <!-- Java -->
+                <div class="bg-[#111827] border border-slate-800 p-6 rounded-3xl flex items-center gap-4 glow-card transition-all">
+                    <div class="w-12 h-12 rounded-2xl bg-amber-500/10 text-amber-400 flex items-center justify-center text-2xl shrink-0">
+                        <i class="fa-brands fa-java"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-base font-bold text-white">Java</h4>
+                        <p class="text-xs text-slate-400">Fundamentos POO y proyectos académicos.</p>
+                    </div>
+                </div>
             </div>
         </section>
 
